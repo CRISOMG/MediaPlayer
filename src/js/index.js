@@ -1,11 +1,10 @@
-import MediaPlayer from './MediaPlayer';
+import MediaPlayer from './MediaPlayer.js';
 
 const video = document.querySelector("#videoElement");
 const reproductionButtom = document.querySelector("#reproductionButtom");
-const mutedButtom = document.querySelector("#mutedButtom");
+const muteButtom = document.querySelector("#muteButtom");
 
 const player = new MediaPlayer({el: video})
 
-const videoImg = document.querySelector('.videoRecommended_img');
-// const URL = "https://www.youtube.com/watch?v=3hn-6EUz4JE"
-// videoImg.onclick = () => open(URL);
+reproductionButtom.onclick = () => {player.togglePlay()};
+muteButtom.onclick = () =>{player.toggleMute()};
